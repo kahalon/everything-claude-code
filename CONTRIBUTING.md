@@ -128,10 +128,10 @@ Describe scenarios where this skill applies.
 
 | Skill | Purpose |
 |-------|---------|
-| `coding-standards/` | TypeScript/JavaScript patterns |
-| `frontend-patterns/` | React and Next.js best practices |
-| `backend-patterns/` | API and database patterns |
+| `coding-standards/` | Universal coding standards |
+| `frontend-slides/` | HTML presentations and PPTX-to-web conversion |
 | `security-review/` | Security checklist |
+| `tdd-workflow/` | TDD methodology |
 
 ---
 

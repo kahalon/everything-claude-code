@@ -5,9 +5,13 @@
 <type>: <description>
 
 <optional body>
+
+Signed-off-by: <name> <email>
 ```
 
 Types: feat, fix, refactor, docs, test, chore, perf, ci
+
+Always sign off commits with `git commit -s` (adds `Signed-off-by` trailer using configured `user.name` and `user.email`).
 
 Note: Attribution disabled globally via ~/.claude/settings.json.
 

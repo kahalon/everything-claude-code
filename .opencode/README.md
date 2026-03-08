@@ -50,7 +50,7 @@ opencode
 
 ## Features
 
-### Agents (12)
+### Agents (11)
 
 | Agent | Description |
 |-------|-------------|
@@ -65,7 +65,6 @@ opencode
 | refactor-cleaner | Dead code cleanup |
 | go-reviewer | Go code review |
 | go-build-resolver | Go build errors |
-| database-reviewer | Database optimization |
 
 ### Commands (31)
 
@@ -152,8 +151,6 @@ export ECC_DISABLED_HOOKS="pre:bash:tmux-reminder,post:edit:typecheck"
 The default OpenCode config loads 11 curated ECC skills via the `instructions` array:
 
 - coding-standards
-- backend-patterns
-- frontend-patterns
 - frontend-slides
 - security-review
 - tdd-workflow
@@ -185,7 +182,7 @@ Full configuration in `opencode.json`:
     "skills/tdd-workflow/SKILL.md",
     "skills/security-review/SKILL.md"
   ],
-  "agent": { /* 12 agents */ },
+  "agent": { /* 11 agents */ },
   "command": { /* 24 commands */ }
 }
 ```

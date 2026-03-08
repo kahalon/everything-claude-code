@@ -205,7 +205,6 @@ When creating PRs:
 | doc-updater | Documentation | Updating docs |
 | go-reviewer | Go code review | Go projects |
 | go-build-resolver | Go build errors | Go build failures |
-| database-reviewer | Database optimization | SQL, schema design |
 
 ### Immediate Agent Usage
 

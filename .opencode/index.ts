@@ -2,7 +2,7 @@
  * Everything Claude Code (ECC) Plugin for OpenCode
  *
  * This package provides a complete OpenCode plugin with:
- * - 13 specialized agents (planner, architect, code-reviewer, etc.)
+ * - 12 specialized agents (planner, architect, code-reviewer, etc.)
  * - 31 commands (/plan, /tdd, /code-review, etc.)
  * - Plugin hooks (auto-format, TypeScript check, console.log warning, env injection, etc.)
  * - Custom tools (run-tests, check-coverage, security-audit, format-code, lint-check, git-summary)
@@ -48,7 +48,7 @@ export const metadata = {
   description: "Everything Claude Code plugin for OpenCode",
   author: "affaan-m",
   features: {
-    agents: 13,
+    agents: 12,
     commands: 31,
     skills: 37,
     hookEvents: [

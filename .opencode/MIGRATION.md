@@ -276,7 +276,6 @@ After migration, ALL 23 commands are available:
 | `refactor-cleaner` | Dead code cleanup |
 | `go-reviewer` | Go code review |
 | `go-build-resolver` | Go build errors |
-| `database-reviewer` | Database optimization |
 
 ## Plugin Installation
 
@@ -343,7 +342,7 @@ If you need to switch back:
 
 | Feature | Claude Code | OpenCode | Status |
 |---------|-------------|----------|--------|
-| Agents | ✅ 12 agents | ✅ 12 agents | **Full parity** |
+| Agents | ✅ 12 agents | ✅ 11 agents | **Claude Code leads** |
 | Commands | ✅ 23 commands | ✅ 23 commands | **Full parity** |
 | Skills | ✅ 16 skills | ✅ 16 skills | **Full parity** |
 | Hooks | ✅ 3 phases | ✅ 20+ events | **OpenCode has MORE** |

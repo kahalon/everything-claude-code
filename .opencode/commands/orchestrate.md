@@ -31,7 +31,6 @@ Orchestrate multiple specialized agents for this complex task: $ARGUMENTS
 | refactor-cleaner | Code cleanup | Dead code removal |
 | go-reviewer | Go code | Go-specific review |
 | go-build-resolver | Go builds | Go build errors |
-| database-reviewer | Database | Query optimization |
 
 ## Orchestration Patterns
 

@@ -10,10 +10,7 @@
 [![GitHub App Install](https://img.shields.io/badge/GitHub%20App-150%20installs-2ea44f?logo=github)](https://github.com/marketplace/ecc-tools)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Shell](https://img.shields.io/badge/-Shell-4EAA25?logo=gnu-bash&logoColor=white)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
-![Go](https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white)
-![Java](https://img.shields.io/badge/-Java-ED8B00?logo=openjdk&logoColor=white)
 ![Markdown](https://img.shields.io/badge/-Markdown-000000?logo=markdown&logoColor=white)
 
 > **50K+ stars** | **6K+ forks** | **30 contributors** | **6 languages supported** | **Anthropic Hackathon Winner**
@@ -95,7 +92,7 @@ This repo is the raw code only. The guides explain everything.
 ### v1.6.0 — Codex CLI, AgentShield & Marketplace (Feb 2026)
 
 - **Codex CLI support** — New `/codex-setup` command generates `codex.md` for OpenAI Codex CLI compatibility
-- **7 new skills** — `search-first`, `swift-actor-persistence`, `swift-protocol-di-testing`, `regex-vs-llm-structured-text`, `content-hash-cache-pattern`, `cost-aware-llm-pipeline`, `skill-stocktake`
+- **5 new skills** — `search-first`, `regex-vs-llm-structured-text`, `content-hash-cache-pattern`, `cost-aware-llm-pipeline`, `skill-stocktake`
 - **AgentShield integration** — `/security-scan` skill runs AgentShield directly from Claude Code; 1282 tests, 102 rules
 - **GitHub Marketplace** — ECC Tools GitHub App live at [github.com/marketplace/ecc-tools](https://github.com/marketplace/ecc-tools) with free/pro/enterprise tiers
 - **30+ community PRs merged** — Contributions from 30 contributors across 6 languages
@@ -108,22 +105,20 @@ This repo is the raw code only. The guides explain everything.
 ### v1.4.0 — Multi-Language Rules, Installation Wizard & PM2 (Feb 2026)
 
 - **Interactive installation wizard** — New `configure-ecc` skill provides guided setup with merge/overwrite detection
-- **PM2 & multi-agent orchestration** — 6 new commands (`/pm2`, `/multi-plan`, `/multi-execute`, `/multi-backend`, `/multi-frontend`, `/multi-workflow`) for managing complex multi-service workflows
-- **Multi-language rules architecture** — Rules restructured from flat files into `common/` + `typescript/` + `python/` + `golang/` directories. Install only the languages you need
+- **PM2 & multi-agent orchestration** — 4 new commands (`/pm2`, `/multi-plan`, `/multi-execute`, `/multi-workflow`) for managing complex multi-service workflows
+- **Multi-language rules architecture** — Rules restructured from flat files into `common/` + `python/` directories. Install only the languages you need
 - **Chinese (zh-CN) translations** — Complete translation of all agents, commands, skills, and rules (80+ files)
 - **GitHub Sponsors support** — Sponsor the project via GitHub Sponsors
 - **Enhanced CONTRIBUTING.md** — Detailed PR templates for each contribution type
 
 ### v1.3.0 — OpenCode Plugin Support (Feb 2026)
 
-- **Full OpenCode integration** — 12 agents, 24 commands, 16 skills with hook support via OpenCode's plugin system (20+ event types)
+- **Full OpenCode integration** — 11 agents, 24 commands, 16 skills with hook support via OpenCode's plugin system (20+ event types)
 - **3 native custom tools** — run-tests, check-coverage, security-audit
 - **LLM documentation** — `llms.txt` for comprehensive OpenCode docs
 
 ### v1.2.0 — Unified Commands & Skills (Feb 2026)
 
-- **Python/Django support** — Django patterns, security, TDD, and verification skills
-- **Java Spring Boot skills** — Patterns, security, TDD, and verification for Spring Boot
 - **Session management** — `/sessions` command for session history
 - **Continuous learning v2** — Instinct-based learning with confidence scoring, import/export, evolution
 
@@ -253,19 +248,15 @@ everything-claude-code/
 |   |-- go-reviewer.md       # Go code review
 |   |-- go-build-resolver.md # Go build error resolution
 |   |-- python-reviewer.md   # Python code review (NEW)
-|   |-- database-reviewer.md # Database/Supabase review (NEW)
 |
 |-- skills/           # Workflow definitions and domain knowledge
 |   |-- coding-standards/           # Language best practices
-|   |-- clickhouse-io/              # ClickHouse analytics, queries, data engineering
-|   |-- backend-patterns/           # API, database, caching patterns
-|   |-- frontend-patterns/          # React, Next.js patterns
-|   |-- frontend-slides/            # HTML slide decks and PPTX-to-web presentation workflows (NEW)
-|   |-- article-writing/            # Long-form writing in a supplied voice without generic AI tone (NEW)
-|   |-- content-engine/             # Multi-platform social content and repurposing workflows (NEW)
-|   |-- market-research/            # Source-attributed market, competitor, and investor research (NEW)
-|   |-- investor-materials/         # Pitch decks, one-pagers, memos, and financial models (NEW)
-|   |-- investor-outreach/          # Personalized fundraising outreach and follow-up (NEW)
+|   |-- frontend-slides/            # HTML slide decks and PPTX-to-web presentation workflows
+|   |-- article-writing/            # Long-form writing in a supplied voice without generic AI tone
+|   |-- content-engine/             # Multi-platform social content and repurposing workflows
+|   |-- market-research/            # Source-attributed market, competitor, and investor research
+|   |-- investor-materials/         # Pitch decks, one-pagers, memos, and financial models
+|   |-- investor-outreach/          # Personalized fundraising outreach and follow-up
 |   |-- continuous-learning/        # Auto-extract patterns from sessions (Longform Guide)
 |   |-- continuous-learning-v2/     # Instinct-based learning with confidence scoring
 |   |-- iterative-retrieval/        # Progressive context refinement for subagents
@@ -274,44 +265,26 @@ everything-claude-code/
 |   |-- security-review/            # Security checklist
 |   |-- eval-harness/               # Verification loop evaluation (Longform Guide)
 |   |-- verification-loop/          # Continuous verification (Longform Guide)
-|   |-- golang-patterns/            # Go idioms and best practices
-|   |-- golang-testing/             # Go testing patterns, TDD, benchmarks
-|   |-- cpp-coding-standards/         # C++ coding standards from C++ Core Guidelines (NEW)
-|   |-- cpp-testing/                # C++ testing with GoogleTest, CMake/CTest (NEW)
-|   |-- django-patterns/            # Django patterns, models, views (NEW)
-|   |-- django-security/            # Django security best practices (NEW)
-|   |-- django-tdd/                 # Django TDD workflow (NEW)
-|   |-- django-verification/        # Django verification loops (NEW)
-|   |-- python-patterns/            # Python idioms and best practices (NEW)
-|   |-- python-testing/             # Python testing with pytest (NEW)
-|   |-- springboot-patterns/        # Java Spring Boot patterns (NEW)
-|   |-- springboot-security/        # Spring Boot security (NEW)
-|   |-- springboot-tdd/             # Spring Boot TDD (NEW)
-|   |-- springboot-verification/    # Spring Boot verification (NEW)
-|   |-- configure-ecc/              # Interactive installation wizard (NEW)
-|   |-- security-scan/              # AgentShield security auditor integration (NEW)
-|   |-- java-coding-standards/     # Java coding standards (NEW)
-|   |-- jpa-patterns/              # JPA/Hibernate patterns (NEW)
-|   |-- postgres-patterns/         # PostgreSQL optimization patterns (NEW)
-|   |-- nutrient-document-processing/ # Document processing with Nutrient API (NEW)
+|   |-- cpp-coding-standards/         # C++ coding standards from C++ Core Guidelines
+|   |-- cpp-testing/                # C++ testing with GoogleTest, CMake/CTest
+|   |-- python-patterns/            # Python idioms and best practices
+|   |-- python-testing/             # Python testing with pytest
+|   |-- configure-ecc/              # Interactive installation wizard
+|   |-- security-scan/              # AgentShield security auditor integration
+|   |-- nutrient-document-processing/ # Document processing with Nutrient API
 |   |-- project-guidelines-example/   # Template for project-specific skills
-|   |-- database-migrations/         # Migration patterns (Prisma, Drizzle, Django, Go) (NEW)
-|   |-- api-design/                  # REST API design, pagination, error responses (NEW)
-|   |-- deployment-patterns/         # CI/CD, Docker, health checks, rollbacks (NEW)
-|   |-- docker-patterns/            # Docker Compose, networking, volumes, container security (NEW)
-|   |-- e2e-testing/                 # Playwright E2E patterns and Page Object Model (NEW)
-|   |-- content-hash-cache-pattern/  # SHA-256 content hash caching for file processing (NEW)
-|   |-- cost-aware-llm-pipeline/     # LLM cost optimization, model routing, budget tracking (NEW)
-|   |-- regex-vs-llm-structured-text/ # Decision framework: regex vs LLM for text parsing (NEW)
-|   |-- swift-actor-persistence/     # Thread-safe Swift data persistence with actors (NEW)
-|   |-- swift-protocol-di-testing/   # Protocol-based DI for testable Swift code (NEW)
-|   |-- search-first/               # Research-before-coding workflow (NEW)
-|   |-- skill-stocktake/            # Audit skills and commands for quality (NEW)
-|   |-- liquid-glass-design/         # iOS 26 Liquid Glass design system (NEW)
-|   |-- foundation-models-on-device/ # Apple on-device LLM with FoundationModels (NEW)
-|   |-- swift-concurrency-6-2/       # Swift 6.2 Approachable Concurrency (NEW)
-|   |-- autonomous-loops/           # Autonomous loop patterns: sequential pipelines, PR loops, DAG orchestration (NEW)
-|   |-- plankton-code-quality/      # Write-time code quality enforcement with Plankton hooks (NEW)
+|   |-- api-design/                  # REST API design, pagination, error responses
+|   |-- deployment-patterns/         # CI/CD, Docker, health checks, rollbacks
+|   |-- docker-patterns/            # Docker Compose, networking, volumes, container security
+|   |-- e2e-testing/                 # Playwright E2E patterns and Page Object Model
+|   |-- content-hash-cache-pattern/  # SHA-256 content hash caching for file processing
+|   |-- cost-aware-llm-pipeline/     # LLM cost optimization, model routing, budget tracking
+|   |-- regex-vs-llm-structured-text/ # Decision framework: regex vs LLM for text parsing
+|   |-- foundation-models-on-device/ # Apple on-device LLM with FoundationModels
+|   |-- search-first/               # Research-before-coding workflow
+|   |-- skill-stocktake/            # Audit skills and commands for quality
+|   |-- autonomous-loops/           # Autonomous loop patterns: sequential pipelines, PR loops, DAG orchestration
+|   |-- plankton-code-quality/      # Write-time code quality enforcement with Plankton hooks
 |
 |-- commands/         # Slash commands for quick execution
 |   |-- tdd.md              # /tdd - Test-driven development
@@ -336,8 +309,6 @@ everything-claude-code/
 |   |-- pm2.md              # /pm2 - PM2 service lifecycle management (NEW)
 |   |-- multi-plan.md       # /multi-plan - Multi-agent task decomposition (NEW)
 |   |-- multi-execute.md    # /multi-execute - Orchestrated multi-agent workflows (NEW)
-|   |-- multi-backend.md    # /multi-backend - Backend multi-service orchestration (NEW)
-|   |-- multi-frontend.md   # /multi-frontend - Frontend multi-service orchestration (NEW)
 |   |-- multi-workflow.md   # /multi-workflow - General multi-service workflows (NEW)
 |   |-- orchestrate.md      # /orchestrate - Multi-agent coordination
 |   |-- sessions.md         # /sessions - Session history management
@@ -358,9 +329,8 @@ everything-claude-code/
 |   |   |-- hooks.md           # Hook architecture, TodoWrite
 |   |   |-- agents.md          # When to delegate to subagents
 |   |   |-- security.md        # Mandatory security checks
-|   |-- typescript/          # TypeScript/JavaScript specific
 |   |-- python/              # Python specific
-|   |-- golang/              # Go specific
+|   |-- swift/               # Swift specific
 |
 |-- hooks/            # Trigger-based automations
 |   |-- README.md                 # Hook documentation, recipes, and customization guide
@@ -560,14 +530,13 @@ This gives you instant access to all commands, agents, skills, and hooks.
 > # Option A: User-level rules (applies to all projects)
 > mkdir -p ~/.claude/rules
 > cp -r everything-claude-code/rules/common/* ~/.claude/rules/
-> cp -r everything-claude-code/rules/typescript/* ~/.claude/rules/   # pick your stack
-> cp -r everything-claude-code/rules/python/* ~/.claude/rules/
-> cp -r everything-claude-code/rules/golang/* ~/.claude/rules/
+> cp -r everything-claude-code/rules/python/* ~/.claude/rules/       # pick your stack
+> cp -r everything-claude-code/rules/swift/* ~/.claude/rules/
 >
 > # Option B: Project-level rules (applies to current project only)
 > mkdir -p .claude/rules
 > cp -r everything-claude-code/rules/common/* .claude/rules/
-> cp -r everything-claude-code/rules/typescript/* .claude/rules/     # pick your stack
+> cp -r everything-claude-code/rules/python/* .claude/rules/         # pick your stack
 > ```
 
 ---
@@ -585,9 +554,8 @@ cp everything-claude-code/agents/*.md ~/.claude/agents/
 
 # Copy rules (common + language-specific)
 cp -r everything-claude-code/rules/common/* ~/.claude/rules/
-cp -r everything-claude-code/rules/typescript/* ~/.claude/rules/   # pick your stack
-cp -r everything-claude-code/rules/python/* ~/.claude/rules/
-cp -r everything-claude-code/rules/golang/* ~/.claude/rules/
+cp -r everything-claude-code/rules/python/* ~/.claude/rules/   # pick your stack
+cp -r everything-claude-code/rules/swift/* ~/.claude/rules/
 
 # Copy commands
 cp everything-claude-code/commands/*.md ~/.claude/commands/
@@ -597,8 +565,8 @@ cp everything-claude-code/commands/*.md ~/.claude/commands/
 cp -r everything-claude-code/.agents/skills/* ~/.claude/skills/
 cp -r everything-claude-code/skills/search-first ~/.claude/skills/
 
-# Optional: add niche/framework-specific skills only when needed
-# for s in django-patterns django-tdd springboot-patterns; do
+# Optional: add domain-specific skills only when needed
+# for s in cpp-coding-standards python-patterns docker-patterns; do
 #   cp -r everything-claude-code/skills/$s ~/.claude/skills/
 # done
 ```
@@ -693,7 +661,6 @@ Not sure where to start? Use this quick reference:
 | Update documentation | `/update-docs` | doc-updater |
 | Review Go code | `/go-review` | go-reviewer |
 | Review Python code | `/python-review` | python-reviewer |
-| Audit database queries | *(auto-delegated)* | database-reviewer |
 
 ### Common Workflows
 
@@ -964,7 +931,7 @@ The configuration is automatically detected from `.opencode/opencode.json`.
 
 | Feature | Claude Code | OpenCode | Status |
 |---------|-------------|----------|--------|
-| Agents | ✅ 16 agents | ✅ 12 agents | **Claude Code leads** |
+| Agents | ✅ 16 agents | ✅ 11 agents | **Claude Code leads** |
 | Commands | ✅ 40 commands | ✅ 31 commands | **Claude Code leads** |
 | Skills | ✅ 65 skills | ✅ 37 skills | **Claude Code leads** |
 | Hooks | ✅ 8 event types | ✅ 11 events | **OpenCode has more!** |
@@ -1010,8 +977,6 @@ OpenCode's plugin system is MORE sophisticated than Claude Code with 20+ event t
 | `/python-review` | Python code review (PEP 8, type hints, security) |
 | `/multi-plan` | Multi-model collaborative planning |
 | `/multi-execute` | Multi-model collaborative execution |
-| `/multi-backend` | Backend-focused multi-model workflow |
-| `/multi-frontend` | Frontend-focused multi-model workflow |
 | `/multi-workflow` | Full multi-model development workflow |
 | `/pm2` | Auto-generate PM2 service commands |
 | `/sessions` | Manage session history |

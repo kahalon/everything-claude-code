@@ -27,4 +27,4 @@ api_key = os.environ["OPENAI_API_KEY"]  # Raises KeyError if missing
 
 ## Reference
 
-See skill: `django-security` for Django-specific security guidelines (if applicable).
+For web framework security, apply OWASP guidelines and use framework-specific security middleware and validators.
