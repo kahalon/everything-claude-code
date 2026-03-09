@@ -101,6 +101,16 @@ if [[ "$TARGET" == "claude" ]]; then
     done
 
     echo "Done. Rules installed to $DEST_DIR/"
+
+    # --- CCG (codeagent-wrapper) ---
+    CCG_SCRIPT="$SCRIPT_DIR/scripts/install-ccg.sh"
+    if [[ -f "$CCG_SCRIPT" ]]; then
+        echo ""
+        echo "Installing codeagent-wrapper and role prompts..."
+        if ! bash "$CCG_SCRIPT"; then
+            echo "Warning: codeagent-wrapper installation failed. Multi-model commands will not be available." >&2
+        fi
+    fi
 fi
 
 # --- Cursor target ---

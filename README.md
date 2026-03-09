@@ -911,6 +911,42 @@ Codex does **not yet provide Claude-style hook execution parity**. ECC enforceme
 
 ---
 
+## Multi-Model Collaboration (CCG)
+
+ECC includes a **codeagent-wrapper** bridge that enables multi-model commands (`/multi-plan`, `/multi-execute`, `/multi-workflow`, `/multi-backend`) to orchestrate external model CLIs alongside Claude.
+
+### Setup
+
+```bash
+# Install the wrapper and role prompts (also runs automatically with install.sh)
+./scripts/install-ccg.sh
+```
+
+This installs:
+
+| Component | Location | Description |
+|-----------|----------|-------------|
+| `codeagent-wrapper` | `~/.claude/bin/codeagent-wrapper` | Bridge script routing prompts to Codex/Gemini CLIs |
+| Codex role prompts | `~/.claude/.ccg/prompts/codex/` | analyzer.md, architect.md, reviewer.md |
+| Gemini role prompts | `~/.claude/.ccg/prompts/gemini/` | analyzer.md, architect.md, frontend.md, reviewer.md |
+
+### Supported Backends
+
+| Backend | Status | Requirement |
+|---------|--------|-------------|
+| **Codex** | Ready | [Codex CLI](https://github.com/openai/codex) installed (`npm install -g @openai/codex`) |
+| **Gemini** | Stub | Prints install instructions; will be enabled when a Gemini CLI is available |
+
+### How It Works
+
+1. Multi-model commands call `codeagent-wrapper` via Bash with a role prompt and task on stdin
+2. The wrapper reads the `ROLE_FILE:` header, prepends the role prompt to the task
+3. Routes to `codex exec --full-auto --json` (or future Gemini CLI)
+4. Returns the model output plus a `SESSION_ID:` line for session reuse
+5. Claude orchestrates the results — external models have **zero filesystem write access**
+
+---
+
 ## 🔌 OpenCode Support
 
 ECC provides **full OpenCode support** including plugins and hooks.
